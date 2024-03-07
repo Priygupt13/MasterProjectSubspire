@@ -12,8 +12,8 @@ conn_details = {
     "database_name": "subspire",
     "server": "subspire.cluster-cegcie0qxdeo.us-west-1.rds.amazonaws.com",
     "port": 3306,
-    "user": "robinhood",
-    "pwd": "bluesky116"
+    "user": "",
+    "pwd": ""
 }
 
 # Creating connection string

@@ -5,8 +5,8 @@ try:
     conn = mysql.connector.connect(
         host="subspire.cluster-cegcie0qxdeo.us-west-1.rds.amazonaws.com",
         user="robinhood",
-        password="bluesky116",
-        database="subspire",
+        password="",
+        database="",
         port=3306
     )
     print("Connected to the database")
