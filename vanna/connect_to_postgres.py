@@ -3,11 +3,11 @@ import mysql.connector
 # Connect to the database
 try:
     conn = mysql.connector.connect(
-        host="subspire.cluster-cegcie0qxdeo.us-west-1.rds.amazonaws.com",
-        user="robinhood",
-        password="bluesky116",
-        database="subspire",
-        port=3306
+        host="",
+        user="",
+        password="",
+        database="",
+        port=''
     )
     print("Connected to the database")
 except mysql.connector.Error as e:

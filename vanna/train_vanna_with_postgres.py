@@ -10,9 +10,9 @@ vn = VannaDefault(model=vanna_model_name, api_key="1e346debc7bd4861b2a9ac8ece05d
 # Connection details
 conn_details = {
     "database_name": "",
-    "server": "subspire.cluster-cegcie0qxdeo.us-west-1.rds.amazonaws.com",
-    "port": 3306,
-    "user": "robinhood",
+    "server": "",
+    "port": '',
+    "user": "",
     "pwd": ""
 }
 
