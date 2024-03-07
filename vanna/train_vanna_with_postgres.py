@@ -9,10 +9,10 @@ vn = VannaDefault(model=vanna_model_name, api_key="1e346debc7bd4861b2a9ac8ece05d
 
 # Connection details
 conn_details = {
-    "database_name": "subspire",
+    "database_name": "",
     "server": "subspire.cluster-cegcie0qxdeo.us-west-1.rds.amazonaws.com",
     "port": 3306,
-    "user": "",
+    "user": "robinhood",
     "pwd": ""
 }
 
@@ -34,14 +34,17 @@ vn.run_sql_is_set = True
 # The information schema query may need some tweaking depending on your database. This is a good starting point.
 df_information_schema = vn.run_sql("SELECT * FROM INFORMATION_SCHEMA.COLUMNS")
 
-# This will break up the information schema into bite-sized chunks that can be referenced by the LLM
 plan = vn.get_training_plan_generic(df_information_schema)
 print(plan)
 
-# If you like the plan, then uncomment this and run it to train
 #vn.train(plan=plan)
 
 training_data = vn.get_training_data()
 print(training_data)
-user_input = input("Ask me: ")
-response = vn.ask(question=user_input)
+
+#vn.train(question='Register a new user named Emily. She resides in the zip code 90210 and uses the email emily@example.com.', sql='INSERT INTO users (uuid, email, fullname, zipcode) VALUES ("e7b5cdef-025e-4e5a-9b71-9e8e201d0d01", "emily@example.com", "Emily", "90210")')
+
+
+
+training_data = vn.get_training_data()
+print(training_data)
